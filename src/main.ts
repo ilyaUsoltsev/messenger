@@ -2,14 +2,16 @@ import './style.css';
 import Handlebars from 'handlebars';
 import * as Components from './components';
 import * as Pages from './pages';
+import { chatsFixture } from './fixtures/chats-fixture';
 
 const pages = {
   login: [Pages.LoginPage],
   register: [Pages.RegisterPage],
   error: [Pages.ErrorPage, { code: '404/501', message: 'Error message' }],
+  chats: [Pages.ChatPage, { chats: chatsFixture }],
   navigation: [
     Pages.NavigatePage,
-    { pages: ['error', 'login', 'register', 'navigation'] },
+    { pages: ['chats', 'error', 'login', 'register', 'navigation'] },
   ],
 };
 
@@ -26,7 +28,7 @@ function navigate(page: string) {
   container.innerHTML = temlpatingFunction(context);
 }
 
-document.addEventListener('DOMContentLoaded', () => navigate('navigation'));
+document.addEventListener('DOMContentLoaded', () => navigate('chats'));
 
 document.addEventListener('click', (e) => {
   //@ts-ignore

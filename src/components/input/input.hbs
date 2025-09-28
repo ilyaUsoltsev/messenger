@@ -1,6 +1,8 @@
 <div class="input">
     <div class="input__container">
-        <label class="input__label" for="{{label}}">{{label}}</label>
+        {{#if label}}
+            <label class="input__label" for="{{label}}">{{label}}</label>
+        {{/if}}
         <input
             class="input__element"
             id="{{label}}"

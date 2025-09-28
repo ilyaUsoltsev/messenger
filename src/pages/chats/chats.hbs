@@ -1,0 +1,16 @@
+<main class="chats scrollbar-hide">
+    <section class="chats__sidebar">
+        <div class="chats__sidebar-header">
+            {{> Input placeholder="Search chats" name="search" type="text" }}
+            {{> Button label="My profile" variant="primary" }}
+        </div>
+        <div class="chats__sidebar-chats scrollbar-hide">
+         {{#each chats}}
+            {{> Chat }}
+         {{/each}}
+        </div>
+    </section>
+    <section class="chats__dialog">
+        chat dialog
+    </section>
+</main>

@@ -1,0 +1,26 @@
+.chats {
+    display: flex;
+    width: 100vw;
+    height: 100vh;    
+}
+
+.chats__sidebar {
+    width: 300px;
+    border-right: 1px solid var(--primary-color);
+    display: flex;
+    flex-direction: column;
+}
+
+.chats__sidebar-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 4px;
+    gap: 4px;
+    border-bottom: 1px solid var(--primary-color);
+}
+
+.chats__sidebar-chats {
+    height: calc(100vh - 81px);
+    overflow-y: auto;
+}

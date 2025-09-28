@@ -3,6 +3,10 @@
     padding: 8px 16px;
     cursor: pointer;
   }
+
+  .button:hover {
+    color: var(--neutral-color);
+  }
   
   .button__primary {
     color: var(--primary-color);
