@@ -1,11 +1,11 @@
-.login-container {
+.register-container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;    
 }
 
-.login-form {
+.register-form {
     display: flex;
     flex-direction: column;
     gap: 4px;
@@ -14,7 +14,7 @@
     border: 1px solid var(--primary-color);
 }
 
-.login-form__actions {
+.register-form__actions {
     display: flex;
     margin-top: 12px;
     gap: 4px;

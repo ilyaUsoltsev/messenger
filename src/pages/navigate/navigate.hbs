@@ -1,4 +1,11 @@
-<ul>
-    <li><a href="#" page="login">Login</a></li>
-    <li><a href="#" page="list">List</a></li>
-</ul>
+<section class="navigate-container">
+    <h1>Pages</h1>
+    <div>
+    <ul>
+        {{!-- use for loop --}}
+        {{#each pages}}
+            <li><a href="#" page="{{this}}">{{this}}</a></li>
+        {{/each}}
+    </ul>
+    </div>
+</section>

@@ -5,7 +5,12 @@ import * as Pages from './pages';
 
 const pages = {
   login: [Pages.LoginPage],
-  nav: [Pages.NavigatePage],
+  register: [Pages.RegisterPage],
+  error: [Pages.ErrorPage, { code: '404/501', message: 'Error message' }],
+  navigation: [
+    Pages.NavigatePage,
+    { pages: ['error', 'login', 'register', 'navigation'] },
+  ],
 };
 
 Object.entries(Components).forEach(([name, template]) => {
@@ -18,11 +23,10 @@ function navigate(page: string) {
   const container = document.getElementById('app')!;
 
   const temlpatingFunction = Handlebars.compile(source);
-  console.log('html', temlpatingFunction(context));
   container.innerHTML = temlpatingFunction(context);
 }
 
-document.addEventListener('DOMContentLoaded', () => navigate('login'));
+document.addEventListener('DOMContentLoaded', () => navigate('navigation'));
 
 document.addEventListener('click', (e) => {
   //@ts-ignore
