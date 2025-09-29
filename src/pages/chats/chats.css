@@ -44,6 +44,12 @@
     border-left: 1px solid var(--primary-color);
 }
 
+.chats__dialog-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
 .chats__dialog-date {
     text-align: center;
     padding: 4px 0;
@@ -56,9 +62,23 @@
 .chats__dialog-header {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 8px;
     padding: 8px;
     border-bottom: 1px solid var(--primary-color);
+}
+
+.chats__dialog-user-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.chats__dialog-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 .chats__dialog-messages {

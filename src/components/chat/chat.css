@@ -9,7 +9,7 @@
 }
 
 .chat:hover, .chat--selected {
-  border-right: 4px solid var(--primary-color);
+  border-right: 4px solid var(--secondary-color);
 }
 
 .chat__image {

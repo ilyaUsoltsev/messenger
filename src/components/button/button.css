@@ -17,6 +17,16 @@
     color: var(--secondary-color);
     border: 1px solid var(--secondary-color);
   }
+
+  .button__error {
+    color: var(--error-color);
+    border: 1px solid var(--error-color);
+  }
+
+  .button__warning {
+    color: var(--warning-color);
+    border: 1px solid var(--warning-color);
+  }
   
  
   

@@ -13,14 +13,14 @@
     {{#if selectedChat}}
         <section class="chats__dialog">
         <div class="chats__dialog-header">
-            <div class="chats__dialog-avatar">
-                <img class="chats__dialog-image" src="{{selectedChat.avatar}}" alt="avatar" />
+            <div class="chats__dialog-user-info">
+                <img class="chats__dialog-avatar" src="{{selectedChat.avatar}}" alt="avatar" />
+                <span class="chats__dialog-name">{{selectedChat.name}}</span>
             </div>
-            <span class="chats__dialog-name">{{selectedChat.name}}</span>
             <div class="chats__dialog-actions">
-                {{> Button label="Add user" variant="icon" icon="add-user" }}
-                {{> Button label="Remove user" variant="icon" icon="remove-user" }}
-                {{> Button label="Delete chat" variant="icon" icon="delete-chat" }}
+                {{> Button label=" + Add user" variant="primary" }}
+                {{> Button label="- Remove user" variant="warning" }}
+                {{> Button label="X Delete chat" variant="error" }}
             </div>
         </div>
         <div class="chats__dialog-messages scrollbar-hide">
