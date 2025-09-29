@@ -6,6 +6,36 @@ export const chatsFixture = [
     lastMessage: 'Are we still on for today?',
     unreadCount: 3,
     isSelected: true,
+    messages: [
+      {
+        date: '1st September 2023',
+        messages: [
+          { text: 'Hello!', time: '09:00 AM', isOwn: false },
+          { text: 'Hello!', time: '09:01 AM', isOwn: true },
+          { text: 'I am good, thanks!', time: '09:05 AM', isOwn: false },
+          { text: 'Hi, how are you?', time: '09:15 AM', isOwn: true },
+          {
+            text: "Industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting",
+            time: '09:00 AM',
+            isOwn: false,
+          },
+        ],
+      },
+      {
+        date: '3rd September 2023',
+        messages: [
+          { text: 'Hello!', time: '09:00 AM', isOwn: false },
+          { text: 'Hello!', time: '09:01 AM', isOwn: true },
+          { text: 'I am good, thanks!', time: '09:05 AM', isOwn: false },
+          { text: 'Hi, how are you?', time: '09:15 AM', isOwn: true },
+          {
+            text: "Industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting",
+            time: '09:00 AM',
+            isOwn: false,
+          },
+        ],
+      },
+    ],
   },
   {
     avatar: './avatar.png',

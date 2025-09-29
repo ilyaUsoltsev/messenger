@@ -10,7 +10,37 @@
          {{/each}}
         </div>
     </section>
-    <section class="chats__dialog">
-        chat dialog
-    </section>
+    {{#if selectedChat}}
+        <section class="chats__dialog">
+        <div class="chats__dialog-header">
+            <div class="chats__dialog-avatar">
+                <img class="chats__dialog-image" src="{{selectedChat.avatar}}" alt="avatar" />
+            </div>
+            <span class="chats__dialog-name">{{selectedChat.name}}</span>
+            <div class="chats__dialog-actions">
+                {{> Button label="Add user" variant="icon" icon="add-user" }}
+                {{> Button label="Remove user" variant="icon" icon="remove-user" }}
+                {{> Button label="Delete chat" variant="icon" icon="delete-chat" }}
+            </div>
+        </div>
+        <div class="chats__dialog-messages scrollbar-hide">
+            {{#each selectedChat.messages}}
+                <div class="chats__dialog-date">{{date}}</div>
+                {{#each messages}}
+                    <div class="message {{#if isOwn}}message--own{{/if}}">
+                    {{text}} @ {{time}}
+                    </div>
+                {{/each}}
+            {{/each}}
+        </div>
+        <div class="chats__dialog-input">
+            {{> Input placeholder="Type a message" name="message" type="text" }}
+            {{> Button label="Send" variant="secondary" }}
+        </div>
+        </section>
+    {{else}}
+        <section class="chats__dialog-empty">
+            <p class="chats__dialog-empty-text">No chat selected</p>
+        </section>
+    {{/if}}
 </main>

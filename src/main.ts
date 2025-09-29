@@ -9,9 +9,22 @@ const pages = {
   register: [Pages.RegisterPage],
   error: [Pages.ErrorPage, { code: '404/501', message: 'Error message' }],
   chats: [Pages.ChatPage, { chats: chatsFixture }],
+  chatsSelected: [
+    Pages.ChatPage,
+    { chats: chatsFixture, selectedChat: chatsFixture[0] },
+  ],
   navigation: [
     Pages.NavigatePage,
-    { pages: ['chats', 'error', 'login', 'register', 'navigation'] },
+    {
+      pages: [
+        'chats',
+        'error',
+        'login',
+        'register',
+        'navigation',
+        'chatsSelected',
+      ],
+    },
   ],
 };
 
@@ -28,7 +41,7 @@ function navigate(page: string) {
   container.innerHTML = temlpatingFunction(context);
 }
 
-document.addEventListener('DOMContentLoaded', () => navigate('chats'));
+document.addEventListener('DOMContentLoaded', () => navigate('navigation'));
 
 document.addEventListener('click', (e) => {
   //@ts-ignore
